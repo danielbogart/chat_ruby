@@ -13,6 +13,10 @@
 		= csrf_meta_tags
 
 	%body
+		= render 'partials/navbar'
+
+		= render 'partials/flash'
+
 		= yield
 
 
