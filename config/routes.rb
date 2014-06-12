@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: :create
 
-  get '/login' => 'sessions#new', as: 'login'
+  get '/signup' => 'sessions#new', as: 'signup'
+  get '/login' => 'sessions#login', as: 'login'
   delete 'logout' => "sessions#destroy", as: :logout
 
 
