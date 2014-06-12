@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'homepage#index'
 
-  resources :resources
+  resources :categories do 
+    resources :resources
+  end
 
   resources :sessions, only: :create
 
