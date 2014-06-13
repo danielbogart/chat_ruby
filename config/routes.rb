@@ -5,6 +5,12 @@ Rails.application.routes.draw do
     resources :resources
   end
 
+  resources :resources
+
+  resources :posts do
+    resources :comments, only: [:create, :update, :destroy]
+  end
+  
   resources :sessions, only: :create
 
   get '/signup' => 'sessions#new', as: 'signup'
