@@ -1,0 +1,8 @@
+%h1= @category.title
+
+%ul
+- @resources.each do |resource|
+  %li= link_to resource.name, resource.url
+  %p= resource.description
+
+= render "partials/resource_form"
