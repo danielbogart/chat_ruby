@@ -1,0 +1,10 @@
+.container
+  .col-sm-10
+    %h1 
+      = markdown @post.title
+    %small
+      = "submitted #{time_ago_in_words(@post.created_at)} ago by " 
+      //= @post.user.name 
+    %hr
+
+    = markdown @post.body

@@ -17,6 +17,9 @@
 						%li
 							%a{ href: '/' }
 								Home
+						%li
+							= link_to "Discussion", posts_path
+								
 						- if @current_user.present?
 							%li
 								%a
