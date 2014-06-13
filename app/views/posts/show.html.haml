@@ -1,10 +1,13 @@
 .container
   .col-sm-10
     %h1 
-      = markdown @post.title
+      = @post.title
     %small
       = "submitted #{time_ago_in_words(@post.created_at)} ago by " 
-      //= @post.user.name 
+      = @post.user.name 
     %hr
 
-    = markdown @post.body
+    = @post.body
+
+    %h2 
+      = pluralize @post.comments.count Comment

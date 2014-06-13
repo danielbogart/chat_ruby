@@ -1,0 +1,8 @@
+.media
+  .media-body
+    = comment.body
+  %small
+    submitted 
+    = time_ago_in_words(post.created_at)
+    ago by
+    = comment.user.name

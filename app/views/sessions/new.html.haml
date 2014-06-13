@@ -6,11 +6,8 @@
 				%h2 Sign Up
 				= form_tag sessions_path do
 					.form-group
-						= label_tag :first_name
-						= text_field_tag :first_name, '', class: 'form-control'
-					.form-group
-						=label_tag :last_name
-						= text_field_tag :last_name, '', class: 'form-control'
+						= label_tag :name
+						= text_field_tag :name, '', class: 'form-control'
 					.form-group
 						= label_tag :email
 						= text_field_tag :email, '', class: 'form-control'
