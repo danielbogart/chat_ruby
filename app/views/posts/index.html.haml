@@ -1,0 +1,21 @@
+.container
+  .col-sm-8
+    %h2 Ruby Study Group Discussion Board
+    %hr
+    - @posts.each do |post|
+      .media
+        .media-body
+          %h4.media-heading
+            = link_to post.title, post
+        %small
+          submitted 
+          = time_ago_in_words(post.created_at)
+          ago by
+          // = post.user.name
+          %br
+          = post.comments.count
+          comments 
+  .col-sm-4
+    %h4.text-center Get out there and say something
+    %p.text-center Join the Ruby on Rails Discussion. Ask questions or just tell us about some full stack awesomeness!
+    = link_to "New Post", new_post_path, class: 'btn btn-primary btn-block'
