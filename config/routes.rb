@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   
   resources :sessions, only: :create
 
-  get '/signup' => 'sessions#new', as: 'signup'
-  get '/login' => 'sessions#login', as: 'login'
+  get '/signup' => 'registrations#new', as: :signup
+  get '/login' => 'sessions#login', as: :login
+
+  post '/signup' => 'registrations#create', as: :registration
   delete 'logout' => "sessions#destroy", as: :logout
 
 
