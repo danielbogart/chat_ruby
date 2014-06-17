@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   resources :sessions, only: :create
 
-  # post '/comment_on/:commentable_type/:commentable_id' => 'comments#create', as: :comment_on
+  post '/comment_on/:commentable_type/:commentable_id' => 'comments#create', as: :comment_on
 
   get '/signup' => 'registrations#new', as: :signup
   get '/login' => 'sessions#login', as: :login

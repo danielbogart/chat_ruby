@@ -1,0 +1,9 @@
+.col-sm-2
+  %h4 New Comment
+.col-sm-10
+  = form_for Comment.new, url: comment_on_path(commentable_type: commentable.class.name, commentable_id: commentable.id) do |f|
+    
+    .form-group
+      = f.text_area :body, rows: 4, class: 'form-control'
+
+    = f.submit "Add Comment", class: 'btn btn-info btn-sm'

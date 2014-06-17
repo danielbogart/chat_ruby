@@ -10,4 +10,11 @@
     = @post.body
 
     %h2 
-      = pluralize @post.comments.count Comment
+      / = pluralize @post.comments.count 
+      Comment
+
+    %hr
+    - @post.comments.each do |comment|
+      = render 'partials/comment', comment: comment
+    %hr
+    = render 'partials/new_comment', commentable: @post
