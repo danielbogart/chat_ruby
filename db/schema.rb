@@ -11,38 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140612204712) do
-=======
 ActiveRecord::Schema.define(version: 20140612221814) do
->>>>>>> acc90ecd738c460d49dd08da58f057e5a3e6ee34
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "categories", force: true do |t|
     t.string "title"
   end
 
-  create_table "resources", force: true do |t|
-    t.integer "category_id"
-    t.integer "user_id"
-    t.string  "name"
-    t.string  "description"
-    t.string  "url"
-  end
-
-=======
   create_table "comments", force: true do |t|
     t.integer  "user_id"
-    t.integer  "post_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "posts", force: true do |t|
@@ -55,7 +42,14 @@ ActiveRecord::Schema.define(version: 20140612221814) do
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
->>>>>>> acc90ecd738c460d49dd08da58f057e5a3e6ee34
+  create_table "resources", force: true do |t|
+    t.integer "category_id"
+    t.integer "user_id"
+    t.string  "name"
+    t.string  "description"
+    t.string  "url"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "name"

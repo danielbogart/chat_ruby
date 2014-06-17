@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
 
 	before_filter 	:set_current_user
 
+	def authenticate_user
+		unless @current_user.present?
+      redirect_to login_path
+      return false
+    end
+	end
 
 
 	private
