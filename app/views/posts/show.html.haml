@@ -4,7 +4,7 @@
       = @post.title
     %small
       = "submitted #{time_ago_in_words(@post.created_at)} ago by " 
-      = @post.user.name 
+      = @post.user
     %hr
 
     = @post.body
@@ -15,6 +15,6 @@
 
     %hr
     - @post.comments.each do |comment|
-      = render 'partials/comment', comment: comment
+      = render 'comments/comment', comment: comment
     %hr
-    = render 'partials/new_comment', commentable: @post
+    = render 'comments/new_comment', commentable: @post

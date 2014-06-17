@@ -23,7 +23,7 @@
 							%li
 								%a
 									Hi
-									= @current_user.name
+									= @current_user
 							%li
 								= link_to 'Log Out', logout_path, method: :delete
 						- else

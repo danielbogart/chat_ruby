@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
 	#########################
 	# Class Methods
 
-	def self.authenticate( provided_id, provided_pw )
-		return false unless existing_user = User.find_by_email( provided_id ) || User.find_by_name( provided_id )
+	def self.authenticate( provided_credential, provided_pw )
+		return false unless existing_user = User.find_by_email( provided_credential ) || User.find_by_name( provided_credential.downcase )
 
 		hashed_provided_pw = Digest::SHA256.hexdigest( provided_pw )
 
@@ -35,5 +35,18 @@ class User < ActiveRecord::Base
 
 		self.password_hash = Digest::SHA256.hexdigest( pw )
 	end
+
+	def to_s
+		self.name.capitalize
+	end
+
+	def to_i
+		self.id
+	end
+
+	def to_h
+		self.attributes
+	end
+
 
 end

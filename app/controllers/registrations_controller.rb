@@ -8,7 +8,7 @@ class RegistrationsController < ApplicationController
 			redirect_to login_path
 			return false
 		end
-		@user.name = params[:name]
+		@user.name = params[:name].downcase
 		@user.password = params[:password]
 
 		if @user.save

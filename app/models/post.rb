@@ -4,4 +4,10 @@ class Post < ActiveRecord::Base
 
   # validates :user, presence: true
   validates :title, length: { minimum: 3 }, presence: true
+
+
+
+  def to_s
+  	self.title
+  end
 end
