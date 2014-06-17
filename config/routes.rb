@@ -13,9 +13,10 @@ Rails.application.routes.draw do
 
   # post '/comment_on/:commentable_type/:commentable_id' => 'comments#create', as: :comment_on
 
-  get '/signup' => 'sessions#new', as: 'signup'
-  get '/login' => 'sessions#login', as: 'login'
-  delete 'logout' => "sessions#destroy", as: :logout
+  get '/signup' => 'registrations#new', as: :signup
+  get '/login' => 'sessions#login', as: :login
 
+  post '/signup' => 'registrations#create', as: :registration
+  delete 'logout' => "sessions#destroy", as: :logout
 
 end
