@@ -1,8 +1,10 @@
 %h1= @category.title
 
-%ul
-- @resources.each do |resource|
-  %li= link_to resource.name, resource.url
-  %p= resource.description
+.col-sm-4
+  .list-group
+    %ul
+    - @resources.each do |resource|
+      %li.list-group-item= link_to resource.name, resource.url
+      %p.list-group-item= resource.description
 
-= render "resources/form"
+    = render "resources/form"
