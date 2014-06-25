@@ -1,10 +1,20 @@
 .container
   .col-sm-10
     %h1 
-      = markdown @post.title
+      = @post.title
     %small
       = "submitted #{time_ago_in_words(@post.created_at)} ago by " 
-      //= @post.user.name 
+      = @post.user
     %hr
 
-    = markdown @post.body
+    = @post.body
+
+    %h2 
+      / = pluralize @post.comments.count 
+      Comment
+
+    %hr
+    - @post.comments.each do |comment|
+      = render 'comments/comment', comment: comment
+    %hr
+    = render 'comments/new_comment', commentable: @post

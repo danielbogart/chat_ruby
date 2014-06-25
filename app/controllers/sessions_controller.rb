@@ -3,8 +3,9 @@ class SessionsController < ApplicationController
 
 
 	def create
+
 		# try to login via provided credentials
-		if user = User.authenticate( params[:email], params[:password] )
+		if user = User.authenticate( params[:credential], params[:password] )
 			login( user )
 			flash[:success] = "#{user.name} Logged In!!!!!!"
 			redirect_to root_path

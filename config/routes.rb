@@ -7,17 +7,16 @@ Rails.application.routes.draw do
 
   resources :resources
 
-  resources :posts do
-    resources :comments, only: [:create, :update, :destroy]
-  end
+  resources :posts 
   
   resources :sessions, only: :create
 
+  post '/comment_on/:commentable_type/:commentable_id' => 'comments#create', as: :comment_on
+
   get '/signup' => 'registrations#new', as: :signup
-  get '/login' => 'sessions#login', as: :login
+  get '/login' => 'sessions#new', as: :login
 
   post '/signup' => 'registrations#create', as: :registration
   delete 'logout' => "sessions#destroy", as: :logout
-
 
 end
