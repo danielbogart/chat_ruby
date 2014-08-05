@@ -7,7 +7,7 @@
       = @post.user
     %hr
 
-    = @post.body
+    = markdown @post.body 
 
     %h2 
       / = pluralize @post.comments.count 

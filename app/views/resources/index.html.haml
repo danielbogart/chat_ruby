@@ -4,7 +4,9 @@
   .list-group
     %ul
     - @resources.each do |resource|
-      %li.list-group-item= link_to resource.name, resource.url
-      %p.list-group-item= resource.description
+      %li.list-group-item
+        = link_to resource.name, resource.url, target: "_blank"
+      %li.list-group-item
+        = resource.description
 
     = render "resources/form"
