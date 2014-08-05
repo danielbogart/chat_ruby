@@ -8,3 +8,4 @@ change database.yml.sample to database.yml and point to your DB
 
 - Britt McGinnis  konamax123@gmail.com
 - Megan Byrne     megan.byrne27@gmail.com
+- Matt Haines	 matt.dmdevco@gmail.com
