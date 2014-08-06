@@ -3,27 +3,27 @@ task populate_links: :environment do
 
   Category.create(
     [
-      {id: 1, title: "Engineering Empathy"},
-      {id: 2, title: "Soft Skills"},
-      {id: 3, title: "Sinatra"},
-      {id: 4, title: "Testing"},
-      {id: 5, title: "ActiveRecord"},
-      {id: 6, title: "HTML and CSS"},
-      {id: 7, title: "Rack"},
-      {id: 8, title: "Environment"},
-      {id: 9, title: "Heroku"},
-      {id: 10, title: "Rake"},
-      {id: 11, title: "git"},
-      {id: 12, title: "Pull Requests"},   
-      {id: 13, title: "JavaScript"},  
-      {id: 14, title: "Jasmine"},  
-      {id: 15, title: "JavaScript Frameworks and Libraries"},  
-      {id: 16, title: "Debugging JavaScript"},  
-      {id: 17, title: "Front End Engineering"},   
-      {id: 18, title: "Tutorials"},   
-      {id: 19, title: "Books"}, 
-      {id: 20, title: "Reading Content"}, 
-      {id: 21, title: "Katas"}     
+      {title: "Engineering Empathy"},
+      {title: "Soft Skills"},
+      {title: "Sinatra"},
+      {title: "Testing"},
+      {title: "ActiveRecord"},
+      {title: "HTML and CSS"},
+      {title: "Rack"},
+      {title: "Environment"},
+      {title: "Heroku"},
+      {title: "Rake"},
+      {title: "git"},
+      {title: "Pull Requests"},   
+      {title: "JavaScript"},  
+      {title: "Jasmine"},  
+      {title: "JavaScript Frameworks and Libraries"},  
+      {title: "Debugging JavaScript"},  
+      {title: "Front End Engineering"},   
+      {title: "Tutorials"},   
+      {title: "Books"}, 
+      {title: "Reading Content"}, 
+      {title: "Katas"}     
     ]
    )
 
