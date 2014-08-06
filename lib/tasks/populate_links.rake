@@ -27,7 +27,6 @@ task populate_links: :environment do
     ]
    )
 
-  #Alternatively could use Category.find_by_title( "HTML & CSS" ).category_id for category_id field in c.resources.create
   #Category 1 = Engineering Empathy
 
   c = Category.find_by_title( "Engineering Empathy" )
