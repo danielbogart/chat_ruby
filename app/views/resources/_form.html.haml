@@ -10,4 +10,5 @@
           = f.label :url
           = f.text_field :url, class: 'form-control'
           / = f.hidden_field_tag :user_id, current_user.id
+          %br
           = f.submit "Create new resource!"
