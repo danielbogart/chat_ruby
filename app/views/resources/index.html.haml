@@ -5,8 +5,11 @@
     %ul
     - @resources.each do |resource|
       %li.list-group-item
-        = link_to resource.name, resource.url, target: "_blank"
-      %li.list-group-item
-        = resource.description
-
+        %h4
+          = link_to resource.name, resource.url, target: "_blank"
+        - if resource.description.present? == true     
+          %p
+            = resource.description
+        - else
+    
     = render "resources/form"
