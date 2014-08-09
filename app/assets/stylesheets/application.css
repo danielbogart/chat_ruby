@@ -18,4 +18,10 @@
  .right { float: right; }
  .group { clear: both; }
  .white-link-font a { color: white; }
-  .white-link-font a:hover { text-decoration: none; }
+ .white-link-font a:hover { text-decoration: none; }
+ .custom-boxed-content {
+ 	border: 1px solid #eee;
+ 	border-radius: 5px;
+ 	background-color: #eee;
+ 	padding: 15px;
+ }
