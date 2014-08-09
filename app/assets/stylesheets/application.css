@@ -24,4 +24,20 @@
  	border-radius: 5px;
  	background-color: #eee;
  	padding: 15px;
+ 	overflow: hidden;
  }
+
+ #google-map-container {
+ 	position: relative;
+    overflow: hidden;
+    padding-bottom: 24%;
+    height: 0;
+ }
+
+#google-map-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
