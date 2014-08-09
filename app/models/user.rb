@@ -48,5 +48,7 @@ class User < ActiveRecord::Base
 		self.attributes
 	end
 
+	#credentials: me@me.com 123
+
 
 end
