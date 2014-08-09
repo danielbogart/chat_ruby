@@ -17,3 +17,5 @@
  .left { float: left; }
  .right { float: right; }
  .group { clear: both; }
+ .white-link-font a { color: white; }
+  .white-link-font a:hover { text-decoration: none; }
