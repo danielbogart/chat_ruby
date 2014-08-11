@@ -26,7 +26,7 @@
 							%li
 								%a
 									Hi
-									= @current_user
+									= @current_user.name.titleize
 							%li
 								= link_to 'Log Out', logout_path, method: :delete
 						- else

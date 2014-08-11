@@ -1,11 +1,14 @@
-%h4 Please feel free to add categories that you think would be helpful
-
-.col-sm-4
-  .list-group
-    %ul
-    - @categories.each do |category|
-      %li.list-group-item= link_to category.title, category_resources_path(category)
-
-    = render "categories/form"
+.container
+  .col-sm-8
+    %h3 Please feel free to add categories that you think would be helpful 
+    %br
+    .list-group
+      %ul
+      - @categories.each do |category|
+        %li.list-group-item
+          %h4
+            = link_to category.title, category_resources_path(category)
+      %br
+      = render "categories/form"
 
 

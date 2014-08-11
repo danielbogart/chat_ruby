@@ -1,12 +1,16 @@
-%h1= @category.title
-
-.col-sm-4
-  .list-group
-    %ul
-    - @resources.each do |resource|
-      %li.list-group-item
-        = link_to resource.name, resource.url, target: "_blank"
-      %li.list-group-item
-        = resource.description
-
-    = render "resources/form"
+.container
+  .col-sm-8
+    %h3= @category.title 
+    %br
+    .list-group
+      %ul
+      - @resources.each do |resource|
+        %li.list-group-item
+          %h4
+            = link_to resource.name, resource.url, target: "_blank"
+          - if resource.description.present? == true     
+            %p
+              = resource.description
+          - else
+      %br
+      = render "resources/form"
