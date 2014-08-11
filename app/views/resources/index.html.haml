@@ -8,6 +8,9 @@
         = link_to resource.name, resource.url, target: "_blank"
       %li.list-group-item
         = resource.description
-        = link_to "New Comment"
+        = link_to "New Comment" 
+        = render "comments/comment_resource"
 
     = render "resources/form"
+
+/ pass to comment controller and have it handle wehre it wants to go
