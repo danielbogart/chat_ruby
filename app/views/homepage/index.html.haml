@@ -1,5 +1,33 @@
-
 .container
 	.row
 		.jumbotron
-			%h1 Woot!
+			%h1 SD Ruby Study Group
+			%p San Diego's Ruby Study Group is a super rad bi-monthly meetup for anyone new to Ruby on Rails. We get together to work through group challenges, help answer each other's questions, and occasionally listen to speakers on intro topics. Generally, we've got a few pros on deck who are available to answer questions.
+			%p
+				%button.btn.btn-primary.btn-sm.white-link-font=link_to "Join Our Next Meetup!", "http://www.meetup.com/sdruby/events/197643122/", :target => "_blank"
+		.col-md-4
+			%h3 Why SD Ruby?
+			%p The Ruby and Rails worlds are known for collaboration and community. We provide a place for rubyists to focus on helping one another while solving fun problems. Finding new challenges is the name of the game, and we're always looking forward to learning something new.
+		.col-md-4
+			%h3 Who Is Welcome?
+			%p We encourage everyone from Ruby newbie to expert to join us. If you have any interest in Ruby at all, we've got a spot here with your name on it. If you're a recruiter or your company is looking for talented full stack developers, come on in. We're excited to meet new members and support the Ruby and Rails communities.
+
+		.col-md-4
+			%h3 Where Can I Get Help?
+			%p 	Whether you're looking for the answer to a Ruby related question, searching for a job, or just want to learn more, we've got a resource for you. View our #{link_to "projects", 'https://github.com/SDRubyStudyGroup/'} on Github (fork and contribute!), join our #{link_to "Meetup Group", 'http://www.meetup.com/sdruby/events/197643122/'}, or check out our #{link_to "Google Group", 'https://groups.google.com/forum/#!forum/sdruby'}.
+	%br	
+	.custom-boxed-content		
+		.col-sm-4
+			%h3 Study Group Meetup
+			%p 
+			%strong When: 
+			every other Tuesday - check out #{link_to "Meetup Group", 'http://www.meetup.com/sdruby/events/197643122/'} for exact dates
+			%p 
+			%strong Where:
+			Ansir Innovation Center - 4685 Convoy St. #210 , San Diego, CA
+			%p 
+			%b What to bring:
+			laptop recommended but not required. Just bring that curiousity!
+		%div#google-map-container
+			%iframe{:src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26821.888681939516!2d-117.15773075650334!3d32.8257570472286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbff9420971b35%3A0xbd23a802437fa6dc!2s4685+Convoy+St+%23210%2C+Empire+Square+Shopping+Center%2C+San+Diego%2C+CA+92111!5e0!3m2!1sen!2sus!4v1407554410073",:width => "730px", :height => "175px", :frameborder => "0", :style => "border:0"}
+	%br
