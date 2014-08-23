@@ -12,3 +12,4 @@ change database.yml.sample to database.yml and point to your DB
 						mhaines25@gmail.com
 - Oliver Treadwell	oliver.treadwell@gmail.com
 - Daniel Bogart		daniel.e.bogart@gmail.com
+- Melanie Crutchfield	melanie_crutchfield@hotmail.com
