@@ -1,3 +1,3 @@
-$(document).ready(function(){
-  $(".hidecomment").hide()
-})
+// $(document).ready(function(){
+//   $(".hidecomment").hide();
+// });
