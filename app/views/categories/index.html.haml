@@ -9,7 +9,7 @@
           %h4
             = link_to category.title, category_resources_path(category)
             .right
-              = link_to "#", category_resources_path(category)
+              = link_to category.resources.count, category_resources_path(category) 
       %br
       = render "categories/form"
 
