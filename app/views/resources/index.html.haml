@@ -13,9 +13,11 @@
             %p
               = resource.description
           - else
-          %button 
+          %button{:class => "btn hidecomment"}
             New comment
-          = render 'comments/new_comment', commentable: resource
+            = render 'comments/new_comment', commentable: resource
       %br
+
+
       = render "resources/form"
 
