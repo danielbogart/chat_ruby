@@ -9,14 +9,13 @@
         %li.list-group-item
           %h4
             = link_to resource.name, resource.url, target: "_blank"
-            / %button{:class => "btn hidecomment"}
-          - if resource.description.present?    
+          - if resource.description    
             %p
               = resource.description
-            .row
-              = link_to "New Comment", "#" , :class => "see-form"
-              .dropdown-toggle
-                = render 'comments/new_comment', commentable: resource
+          .row
+            = link_to "New Comment", "#" , :class => "see-form"
+            .dropdown-toggle
+              = render 'comments/new_comment', commentable: resource
               
       %br
 
