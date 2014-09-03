@@ -10,12 +10,13 @@
           %h4
             = link_to resource.name, resource.url, target: "_blank"
             / %button{:class => "btn hidecomment"}
-            .row
-              = link_to("New Comment")
-              = render 'comments/new_comment', commentable: resource
           - if resource.description.present?    
             %p
               = resource.description
+            .row
+              = link_to "New Comment", "#" , :class => "see-form"
+              .dropdown-toggle
+                = render 'comments/new_comment', commentable: resource
               
       %br
 
