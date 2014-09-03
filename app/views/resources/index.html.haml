@@ -1,7 +1,4 @@
 
-
-/ pass to comment controller and have it handle wehre it wants to go
-
 .container
   .col-sm-8
     %h3= @category.title 
@@ -15,8 +12,10 @@
           - if resource.description.present? == true     
             %p
               = resource.description
-              / = render "comments/comment_resource"
           - else
+          %button 
+            New comment
+          = render 'comments/new_comment', commentable: resource
       %br
       = render "resources/form"
 
