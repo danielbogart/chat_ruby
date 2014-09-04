@@ -2,6 +2,7 @@ class ResourcesController < ApplicationController
 
   def index
     @category = Category.find(params[:category_id])
+    
     @resource = Resource.new
     @resources = @category.resources.all 
   end

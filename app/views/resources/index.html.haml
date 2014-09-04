@@ -1,6 +1,8 @@
+
 .container
   .col-sm-8
-    %h3= @category.title 
+    %h3
+      = @category.title 
     %br
     .list-group
       %ul
@@ -8,9 +10,24 @@
         %li.list-group-item
           %h4
             = link_to resource.name, resource.url, target: "_blank"
-          - if resource.description.present? == true     
+          - if resource.description    
             %p
               = resource.description
-          - else
+          .row
+            = link_to "New Comment", "#" , :class => "see-form"
+            .dropdown-toggle
+              = render 'comments/new_comment', commentable: resource
+          - resource.comments.each do |comment|
+            %li.list-group-item
+              %p
+                = comment.body
+                - user = comment.user_id
+                - user_comment = User.find_by_id(user)
+                %p 
+                  comment made by #{user_comment.name}
+              
       %br
+
+
       = render "resources/form"
+
