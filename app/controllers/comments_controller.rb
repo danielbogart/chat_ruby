@@ -3,9 +3,6 @@ class CommentsController < ApplicationController
 
   def create
     commentable = params[:commentable_type].constantize.find_by( id: params[:commentable_id] )
-    p "***********"
-    p params
-    p "***********"
     if commentable.present? && commentable.respond_to?( :comments )
       @comment = Comment.new(comment_params)
       @comment.user = @current_user

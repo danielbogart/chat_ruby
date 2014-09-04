@@ -20,7 +20,10 @@
             %li.list-group-item
               %p
                 = comment.body
-                = comment.user_id
+                - user = comment.user_id
+                - user_comment = User.find_by_id(user)
+                %p 
+                  comment made by #{user_comment.name}
               
       %br
 
