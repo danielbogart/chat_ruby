@@ -3,8 +3,8 @@ ready = function(){
 
   CommentFormRevealer.bindEvents();
 
-}
+};
 
 
 $(document).ready(ready);
-$(document).on('page:load', ready)
+$(document).on('page:load', ready);
