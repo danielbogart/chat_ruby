@@ -17,14 +17,15 @@
             = link_to "New Comment", "#" , :class => "see-form"
             .dropdown-toggle
               = render 'comments/new_comment', commentable: resource
-          - resource.comments.each do |comment|
-            %li.list-group-item
-              %p
-                = comment.body
-                - user = comment.user_id
-                - user_comment = User.find_by_id(user)
-                %p 
-                  comment made by #{user_comment.name}
+          %ul.list-group
+            - resource.comments.each do |comment|
+              %li.list-group-item.comment
+                %p
+                  = comment.body
+                  - user = comment.user_id
+                  - user_comment = User.find_by_id(user)
+                  %i 
+                    comment made by #{user_comment.name}
               
       %br
 

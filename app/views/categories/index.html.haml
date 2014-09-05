@@ -8,8 +8,8 @@
         %li.list-group-item
           %h4
             = link_to category.title, category_resources_path(category)
-            .right
-              = link_to category.resources.count, category_resources_path(category) 
+            .right.badge
+              = link_to category.resources.count, category_resources_path(category), :class => "re-count"
       %br
       = render "categories/form"
 
