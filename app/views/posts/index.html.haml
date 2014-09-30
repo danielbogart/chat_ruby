@@ -16,7 +16,9 @@
           = post.comments.count
           comments 
           - if post.user == @current_user
-            = link_to "Delete", "/posts/"+post.id.to_s, :method => :DELETE, :class => "btn btn-sm btn-danger pull-right"
+            = link_to "Edit", "/posts/"+post.id.to_s+"/edit", :method => :GET, :class => "btn btn-sm btn-primary"      
+          - if post.user == @current_user
+            = link_to "Delete", "/posts/"+post.id.to_s, :method => :DELETE, :class => "btn btn-sm btn-danger"     
   .col-sm-4
     %h4.text-center Get out there and say something
     %p.text-center Join the Ruby on Rails Discussion. Ask questions or just tell us about some full stack awesomeness!

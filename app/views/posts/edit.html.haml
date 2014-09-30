@@ -1,0 +1,19 @@
+.container
+  .col-sm-8
+    = form_for @post, :url => { :action => "update" }, :html => { :method => "put" } do |f|
+      .form-group
+        = f.label :title
+        = f.text_field :title, autofocus: :true, class: "form-control"
+      .form-group
+        = f.label "Elaborate"
+        = f.text_area :body, rows: '10', class: 'form-control'
+      = f.submit "Save", class: 'btn btn-primary'
+    %hr
+  .col-sm-4
+    %h2 Start a Convo
+    %p
+      The body of this wiki can be written in Markdown, which allows you to format your text and display things like images from the web as well as link to other sites.
+      %br
+      %br
+      For instructions on how to use Markdown, 
+      %a{href: "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet", target: '_blank'} go here
