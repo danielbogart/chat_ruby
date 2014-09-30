@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root to: 'homepage#index'
 
+  delete '/comments/:id' => "comments#destroy"
+  delete '/posts/:id' => "posts#destroy"
+
+  put '/posts/:id' => "posts#update"
+
   resources :categories do 
     resources :resources
   end
