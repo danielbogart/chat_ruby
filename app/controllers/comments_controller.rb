@@ -20,9 +20,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    Comment.find(params[:id]).destroy
+    redirect_to :back
+    flash[:notice] = "Your comment has been deleted"
+  end
+
   private
 
   def comment_params
     params.require(:comment).permit(:body)    
   end
+
 end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'homepage#index'
 
+  delete '/comments/:id' => "comments#destroy"
+
   resources :categories do 
     resources :resources
   end

@@ -3,3 +3,5 @@
     = comment.body
   %small
     = "submitted #{time_ago_in_words(comment.created_at)} ago by #{comment.user}"
+  - if comment.user == @current_user
+    = link_to "Delete", "/comments/"+comment.id.to_s, :method => :DELETE, :class => "btn btn-sm btn-danger pull-right"
