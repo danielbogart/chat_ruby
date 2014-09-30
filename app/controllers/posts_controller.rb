@@ -35,8 +35,13 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update_attributes(post_params)
     @post.save
-    redirect_to posts_path
-    flash[:notice] = "Your post has been saved"    
+    if @post.save
+      flash[:notice] = "#{@post.title} updated."
+      redirect_to posts_path
+    else
+      flash[:error] = "There was a problem updating your post."
+      render :new
+    end
   end
 
   def destroy

@@ -14,7 +14,8 @@
           = post.user
           %br
           = post.comments.count
-          comments 
+          comments
+          %br 
           - if post.user == @current_user
             = link_to "Edit", "/posts/"+post.id.to_s+"/edit", :method => :GET, :class => "btn btn-sm btn-primary"      
           - if post.user == @current_user
