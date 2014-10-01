@@ -1,30 +1,11 @@
-class RegistrationsController < ApplicationController
+class RegistrationsController < Devise::RegistrationsController
+	before_filter :update_sanitized_params, if: :devise_controller?
 
-
-	def create
-		@user = User.where( email: params[:email] ).first_or_initialize
-		if @user.persisted?
-			flash[:notice] = "User is already registered. Login instead."
-			redirect_to login_path
-			return false
-		end
-		@user.name = params[:name].downcase
-		@user.password = params[:password]
-
-		if @user.save
-			flash[:success] = "Welcome #{@user.name}!"
-			login( @user )
-			redirect_to root_path
-		else
-			redirect_to :back
-		end
-
-
+	def update_sanitized_params
+		devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:name, :email, :password, :password_confirmation)}
+		devise_parameter_sanitizer.for(:account_update) {|u| u.permit(:name, :email, :password, :password_confirmation, :current_password)}
 	end
 
 
-	def new
-		
-	end
 
 end

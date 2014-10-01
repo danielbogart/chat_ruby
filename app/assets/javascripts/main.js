@@ -2,6 +2,7 @@ var ready;
 ready = function(){
 
   CommentFormRevealer.bindEvents();
+  // CommentRevealer.bindEvents();
 
 };
 

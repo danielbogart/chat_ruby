@@ -8,6 +8,7 @@ gem 'rails', '4.1.0'
 #makes it so that I can use a markdown filter in haml
 gem 'tilt'
 gem 'redcarpet'
+gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -43,3 +44,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'haml'
+gem 'newrelic_rpm'
