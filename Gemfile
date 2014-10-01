@@ -45,3 +45,8 @@ gem 'spring',        group: :development
 
 gem 'haml'
 gem 'newrelic_rpm'
+
+# For ENV vars used with Devise Mailer
+group :development, :test do
+	gem 'foreman'
+end
